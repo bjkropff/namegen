@@ -5,8 +5,7 @@
     * @backupStaticAttributes disabled
     */
 
-
-    class Task
+    class Syllable
     {
         private $description;
 

@@ -1,6 +1,7 @@
 <?php
     require_once __DIR__."/../vendor/autoload.php";
     require_once __DIR__."/../src/Task.php";
+    require_once __DIR__."/../src/Syllable.php";
 
     use Symfony\Component\Debug\Debug;
     Debug::enable();
@@ -21,6 +22,11 @@
     Request::enableHttpMethodParameterOverride();
 
     $app->get("/", function() use ($app) {
+       return $app['twig']->render('home.twig');
+   });
+
+
+    $app->get("/task", function() use ($app) {
        return $app['twig']->render('task.twig', array('tasks' => Task::getAll()));
    });
 
