@@ -5,6 +5,11 @@
     * @backupStaticAttributes disabled
     */
 
+
+    // if (empty($_SESSION['list_of_tasks'])) {
+    //      $_SESSION['list_of_tasks'] = array();
+    // }
+
     class Task
     {
         private $description;
